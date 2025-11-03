@@ -41,4 +41,3 @@ Python kodu sadece tarih ve model bilgilerini düzenlemek için kullanılır.
 
 Fontlar otomatik olarak yüklenecek şekilde ayarlanmıştır.
 
-## Yapımcı: haktamar
