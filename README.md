@@ -33,6 +33,7 @@ Fontlar otomatik olarak yüklenecek şekilde ayarlanmıştır.
 ## Örnek Görsel
 
 <p align="center">
-  <img src="screenshot.png" alt="Axon Bodycam Overlay Preview" width="600"><br>
+  <img src="https://raw.githubusercontent.com/hakXz/axon-bodycam-obs-overlay/main/Screenshot.png" 
+       alt="Axon Bodycam Overlay Preview" width="600"><br>
   <em>OBS üzerinde çalışan Axon Bodycam arayüzü</em>
 </p>
