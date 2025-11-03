@@ -44,4 +44,5 @@ Python kodu sadece tarih ve model bilgilerini düzenlemek için kullanılır.
 Fontlar otomatik olarak yüklenecek şekilde ayarlanmıştır.
 
 Yapımcı: haktamar
+
 Amaç: OBS sahnelerinde gerçekçi Axon Bodycam efekti oluşturmak
