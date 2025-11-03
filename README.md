@@ -18,30 +18,20 @@ Bu proje, OBS üzerinde kullanılabilen basit bir Axon Bodycam arayüzüdür. Ge
 main.py dosyasını çalıştırın:
 
 bash
-Copy code
 python main.py
 Açılan pencereden tarih, model ve diğer ayarları yapın.
 
 OBS’e tarayıcı kaynağı (Browser Source) olarak index.html dosyasını ekleyin.
 
 Dosya Yapısı
-arduino
-Copy code
 axon-bodycam/
 │
-
 ├── index.html
-
 ├── style.css
-
 ├── config.js
-
 ├── axon_logo.png
-
 ├── main.py
-
 ├── requirements.txt
-
 └── README.md
 
 Notlar
