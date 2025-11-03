@@ -23,17 +23,6 @@ Bu proje, OBS üzerinde kullanılabilen basit bir Axon Bodycam arayüzüdür. Ge
 
 OBS’e tarayıcı kaynağı (Browser Source VEYA Browser) olarak index.html dosyasını ekleyin.
 
-Dosya Yapısı
-axon-bodycam/
-│
-├── index.html
-├── style.css
-├── config.js
-├── axon_logo.png
-├── main.py
-├── requirements.txt
-└── README.md
-
 ## Notlar
 HTML/CSS dosyaları OBS tarayıcı kaynağına eklenmelidir.
 
