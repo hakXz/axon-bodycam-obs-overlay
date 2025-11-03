@@ -19,7 +19,7 @@ Bu proje, OBS üzerinde kullanılabilen basit bir Axon Bodycam arayüzüdür. Ge
    main.py dosyasını çalıştırın:
 
 - python main.py
-- Açılan pencereden tarih, model ve diğer ayarları yapın.
+4. Açılan pencereden tarih, model ve diğer ayarları yapın.
 
 OBS’e tarayıcı kaynağı (Browser Source VEYA Browser) olarak index.html dosyasını ekleyin.
 
