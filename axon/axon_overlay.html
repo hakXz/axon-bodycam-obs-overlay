@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Axon Bodycam Overlay</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="overlay">
+    <div id="text">
+      <div id="line1">2022-09-25 20:40:34 -0400</div>
+      <div id="line2">AXON BODY 3 X60A54157</div>
+    </div>
+    <img id="logo" src="axon_logo.png" alt="Axon Logo">
+  </div>
+
+<script src="config.js"></script>
+<script>
+function updateTime() {
+  const now = new Date();
+  const tzOffset = now.getTimezoneOffset() / -60;
+  const sign = tzOffset >= 0 ? "+" : "-";
+  const formatted = now.getFullYear() + "-" +
+    String(now.getMonth()+1).padStart(2, '0') + "-" +
+    String(now.getDate()).padStart(2, '0') + " " +
+    String(now.getHours()).padStart(2, '0') + ":" +
+    String(now.getMinutes()).padStart(2, '0') + ":" +
+    String(now.getSeconds()).padStart(2, '0') + " " +
+    sign + String(Math.abs(tzOffset)).padStart(2, '0') + "00";
+
+  document.getElementById("line1").innerText = formatted;
+}
+setInterval(updateTime, 1000);
+updateTime();
+</script>
+</body>
+</html>
