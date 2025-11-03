@@ -30,3 +30,9 @@ Python kodu sadece tarih ve model bilgilerini düzenlemek için kullanılır.
 
 Fontlar otomatik olarak yüklenecek şekilde ayarlanmıştır.
 
+## Örnek Görsel
+
+<p align="center">
+  <img src="screenshot.png" alt="Axon Bodycam Overlay Preview" width="600"><br>
+  <em>OBS üzerinde çalışan Axon Bodycam arayüzü</em>
+</p>
