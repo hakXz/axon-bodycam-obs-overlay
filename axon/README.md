@@ -1,10 +1,6 @@
 # Axon Bodycam Overlay
 
-Bu proje, OBS üzerinde kullanılabilen basit bir Axon Bodycam arayüzüdür. 
-Gerçek bir bodycam görüntüsüne benzer şekilde tarih, saat ve model bilgilerini ekranda gösterir. 
-Ayrıca küçük bir panel üzerinden tarih, model ve isim gibi bilgileri ayarlayabilirsiniz.
-
----
+Bu proje, OBS üzerinde kullanılabilen basit bir Axon Bodycam arayüzüdür. Gerçek bir bodycam görüntüsüne benzer şekilde tarih, saat ve model bilgilerini ekranda gösterir. Ayrıca küçük bir panel üzerinden tarih, model ve isim gibi bilgileri ayarlayabilirsiniz.
 
 ## Özellikler
 - Gerçekçi Axon Bodycam görünümü  
@@ -13,47 +9,24 @@ Ayrıca küçük bir panel üzerinden tarih, model ve isim gibi bilgileri ayarla
 - Kolay arayüz  
 - OBS ile uyumlu HTML/CSS/JS altyapısı  
 
----
-
 ## Kurulum
-1. Projeyi bilgisayarınıza indirin veya zip olarak çıkarın.  
-2. Bilgisayarınızda **Python 3** kurulu olduğundan emin olun.  
-3. Gerekli Python kütüphanelerini yükleyin:
-   ```bash
+1. Depoyu bilgisayarınıza indirin veya zip olarak çıkarın.  
+2. Python 3 yüklü olduğundan emin olun.  
+3. Gerekli kütüphaneleri yükleyin:
+
    pip install -r requirements.txt
-   ```
-4. **main.py** dosyasını çalıştırın:
-   ```bash
-   python main.py
-   ```
-5. Açılan pencereden tarih, model ve diğer bilgileri ayarlayın.  
-6. OBS'e girin ve bir **Tarayıcı Kaynağı (Browser Source VEYA Browser)** ekleyin.  
-   Ardından **index.html** dosyasını kaynak olarak seçin.  
+   
+   main.py dosyasını çalıştırın:
 
----
+- python main.py
+- Açılan pencereden tarih, model ve diğer ayarları yapın.
 
-## Dosya Yapısı
-```
-axon-bodycam/
-│
-├── index.html          # OBS'e eklenecek HTML arayüzü
-├── style.css           # Arayüz tasarımı
-├── config.js           # Ayar dosyası (Python script tarafından güncellenir)
-├── axon_logo.png       # Axon logosu
-├── main.py             # Python kontrol paneli (ayar yönetimi)
-├── requirements.txt    # Gerekli Python kütüphaneleri
-└── README.md           # Proje açıklaması
-```
-
----
+OBS’e tarayıcı kaynağı (Browser Source VEYA Browser) olarak index.html dosyasını ekleyin.
 
 ## Notlar
-- HTML/CSS dosyaları **OBS Tarayıcı Kaynağı** olarak eklenmelidir.  
-- **Python kodu yalnızca tarih ve model bilgilerini düzenlemek içindir.**  
-- Fontlar ve efektler **otomatik olarak yüklenir**.  
-- Gerçekçi efektler ve Axon logosu, OBS üzerinde tam uyum sağlar.  
+HTML/CSS dosyaları OBS tarayıcı kaynağına eklenmelidir.
 
----
+Python kodu sadece tarih ve model bilgilerini düzenlemek için kullanılır.
 
-Yapımcı : hàk
+Fontlar otomatik olarak yüklenecek şekilde ayarlanmıştır.
 
