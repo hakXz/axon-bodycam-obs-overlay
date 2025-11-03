@@ -29,13 +29,21 @@ arduino
 Copy code
 axon-bodycam/
 │
+
 ├── index.html
+
 ├── style.css
+
 ├── config.js
+
 ├── axon_logo.png
+
 ├── main.py
+
 ├── requirements.txt
+
 └── README.md
+
 Notlar
 HTML/CSS dosyaları OBS tarayıcı kaynağına eklenmelidir.
 
