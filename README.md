@@ -20,8 +20,8 @@ Bu proje, OBS üzerinde kullanılabilen basit bir Axon Bodycam arayüzüdür. Ge
 
 ### 1. Projeyi İndirme
 ```bash
-git clone https://github.com/kullanici-adi/proje-adi.git
-cd proje-adi
+git clone https://github.com/hakXz/axon-bodycam-obs-overlay.git
+cd axon-bodycam-obs-overlay
 ```
 
 ### 2. Python Bağımlılıklarını Yükleme
