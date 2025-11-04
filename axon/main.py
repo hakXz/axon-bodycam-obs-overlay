@@ -5,17 +5,8 @@ import os
 
 CONFIG_PATH = "config.js"
 
-def save_config(model, date_choice, custom_date):
-    if date_choice == "custom":
-        try:
-            start_time = datetime.strptime(custom_date, "%Y-%m-%d %H:%M:%S")
-        except ValueError:
-            messagebox.showerror("Hata", "Tarih formatı: YYYY-MM-DD HH:MM:SS olmalı.")
-            return
-        timestamp = start_time.strftime("%Y-%m-%d %H:%M:%S")
-        js_time_setting = f"const customStartTime = new Date('{timestamp}');"
-    else:
-        js_time_setting = "const customStartTime = new Date();"
+def save_config(model):
+    js_time_setting = "const customStartTime = new Date();"
 
     model_label = model
     serial_prefix = "X"
@@ -59,7 +50,7 @@ updateTime();
 def create_gui():
     root = tk.Tk()
     root.title("Axon Overlay Kontrol Paneli")
-    root.geometry("400x320")
+    root.geometry("400x250")
     root.resizable(False, False)
 
     ttk.Label(root, text="AXON Bodycam Overlay Kontrolü", font=("Segoe UI", 12, "bold")).pack(pady=10)
@@ -67,18 +58,11 @@ def create_gui():
     ttk.Label(root, text="Model Seç:").pack()
     model_var = tk.StringVar(value="AXON BODY 3")
     model_combo = ttk.Combobox(root, textvariable=model_var, values=["AXON BODY 2", "AXON BODY 3", "AXON BODY 4", "AXON FLEET 2", "AXON FLEET 3"], state="readonly", width=20)
-    model_combo.pack(pady=5)
+    model_combo.pack(pady=10)
 
-    date_choice = tk.StringVar(value="now")
-    ttk.Label(root, text="Zaman Seçimi:").pack()
-    ttk.Radiobutton(root, text="Şu anki zamandan başlat", variable=date_choice, value="now").pack(anchor="w", padx=60)
-    ttk.Radiobutton(root, text="Belirli bir tarihten başlat", variable=date_choice, value="custom").pack(anchor="w", padx=60)
+    ttk.Label(root, text="Zaman: Şu anki zamandan başlatılacak", font=("Segoe UI", 9)).pack(pady=5)
 
-    ttk.Label(root, text="Tarih (YYYY-MM-DD HH:MM:SS):").pack()
-    custom_date = tk.StringVar()
-    ttk.Entry(root, textvariable=custom_date, width=30).pack(pady=5)
-
-    ttk.Button(root, text="Kaydet ve Başlat", command=lambda: save_config(model_var.get(), date_choice.get(), custom_date.get())).pack(pady=20)
+    ttk.Button(root, text="Kaydet ve Başlat", command=lambda: save_config(model_var.get())).pack(pady=20)
 
     ttk.Label(root, text="OBS'de overlay'i yenileyerek değişiklikleri görebilirsin.", font=("Segoe UI", 8)).pack()
 
@@ -86,4 +70,3 @@ def create_gui():
 
 if __name__ == "__main__":
     create_gui()
-
