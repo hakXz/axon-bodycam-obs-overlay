@@ -71,7 +71,7 @@ def create_gui():
     ttk.Label(root, text="Model Seç:").pack()
     model_var = tk.StringVar(value="AXON BODY 3")
     ttk.Combobox(root, textvariable=model_var,
-                 values=["AXON BODY 2", "AXON BODY 3", "AXON BODY 4", "AXON FLEET 2", "AXON FLEET 3"],
+                 values=["AXON BODY 2", "AXON BODY 3", "AXON BODY 4", "AXON FLEET 2 F", "AXON FLEET 3 F"],
                  state="readonly", width=20).pack(pady=5)
 
     ttk.Label(root, text="Zaman Ayarı:").pack(pady=(10, 0))
@@ -96,3 +96,4 @@ def create_gui():
 
 if __name__ == "__main__":
     create_gui()
+
