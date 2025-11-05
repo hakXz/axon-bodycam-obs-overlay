@@ -1,13 +1,10 @@
-const customStartTime = new Date();
+const customStartTime = new Date(2012, 11, 12, 23, 5, 49);
 const model = "AXON BODY 3";
 const serial = "X" + Math.floor(10000000 + Math.random() * 89999999);
 
-document.getElementById("line2").innerText = `${model} ${serial}`;
-
 function updateTime() {
-  const now = new Date();
-  const elapsed = now - customStartTime;
-  const current = new Date(customStartTime.getTime() + elapsed);
+  const current = customStartTime; 
+  customStartTime.setSeconds(customStartTime.getSeconds() + 1); 
 
   const tzOffset = current.getTimezoneOffset() / -60;
   const sign = tzOffset >= 0 ? "+" : "-";
@@ -20,6 +17,7 @@ function updateTime() {
     sign + String(Math.abs(tzOffset)).padStart(2, '0') + "00";
 
   document.getElementById("line1").innerText = formatted;
+  document.getElementById("line2").innerText = `${model} ${serial}`;
 }
 
 setInterval(updateTime, 1000);
